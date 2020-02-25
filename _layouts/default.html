@@ -7,6 +7,11 @@
     {{ content }}
   </div>
   
-  {% include analytics.html %}
+  
+  {% if jekyll.environment == 'production' %} <!-- inserted these 3 lines 25/02/2020 -->
+  {% include analytics.html %}				  <!-- stops local hosted version from registering with google analytics -->
+  {% endif %}
+  
+  <!-- {% include analytics.html %} trying the 3 lines above, instead -->
 </body>
 </html>
