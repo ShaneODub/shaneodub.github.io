@@ -1,0 +1,37 @@
+I"\	<h2 id="how-do-you-scrape-data-with-r">How do you scrape data with R?</h2>
+
+<p>I’ll walk you through the method that I’m familiar with, using the <em>rvest</em> package.</p>
+
+<p>First, I’ll use <em>pacman</em> to install some packages that we’ll need.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"pacman"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">pacman</span><span class="o">::</span><span class="n">p_load</span><span class="p">(</span><span class="n">rvest</span><span class="p">,</span><span class="w"> </span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">stringr</span><span class="p">,</span><span class="w"> </span><span class="n">tidyr</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="http://localhost:4000/assets/img/scrape-irish-parliament-deputies.png" alt="plot of chunk deputies" /></p>
+
+<p>In this specific example, there are several elements that I want to extract from each webpage, so I’ll download the pages in their entirety before extracing what I need and storing it in a dataframe.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">summary</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</code></pre></div></div>
+
+<h2 id="including-plots">Including Plots</h2>
+
+<p>You can also embed plots, for example:</p>
+
+<p><img src="http://localhost:4000/assets/img/scrape-irish-parliament-pressure-1.png" alt="plot of chunk pressure" /></p>
+
+<p><img src="http://localhost:4000/assets/img/scrape-irish-parliament-cars_plot-1.png" alt="plot of chunk cars_plot" /></p>
+
+<p>Note that the <code class="highlighter-rouge">echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+:ET
